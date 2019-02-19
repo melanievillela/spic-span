@@ -35,6 +35,7 @@ form.addEventListener("submit", (e) => {
     success.style.display="flex";
     window.setTimeout(closed, 1500)
     window.setTimeout(function() {success.style.display="none"}, 1500);
+    form.reset();
 });   
 
 //Modal close
