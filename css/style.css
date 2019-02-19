@@ -1,0 +1,210 @@
+a {
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    font-size: 1.65em;
+}
+
+body {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Patua One', cursive;
+}
+
+#close {
+    float: right;
+    cursor: pointer;
+}
+
+#contact {
+    color: red;
+    padding: 5px;
+    margin: 0px;
+    font-size: 2em;
+    text-shadow: 1px 1px black;
+    cursor: pointer;
+}
+
+.contact-div {
+    display: flex;
+    flex-direction: column;
+}
+
+#day {
+    width: 30px;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    text-align: center;
+    width: 300px;
+    padding: 10px;
+    background-color: #ffcc00; 
+    border-radius: 10px;
+    z-index: 100;
+}
+
+h1, h2, h4 {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Handlee', cursive;
+    font-weight: bold;
+    text-shadow: 2px 2px #ffcc00;
+}
+
+header {
+    background-image: url("../cleaning.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    position: sticky;
+    top: 0;
+}
+
+hr {
+    border: solid 3px #ffcc00;
+    width: 95%;
+}
+
+.icon {
+    color: #ffcc00;
+    padding: 25px 0;
+}
+
+input, select {
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.jumbotron {
+    margin: 25px;
+    padding: 15px 0;
+    background-color: rgba(255, 255, 255, .5);  
+    border-radius: 15px;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+li {
+    padding: 5px 10px;
+}
+
+.modal-background {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); 
+    position: absolute;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center; 
+    display: none;
+}
+
+p {
+    padding: 0 25px;
+    line-height: 1.25em;
+}
+
+#submit {
+    border: none;
+    background-color: red;
+    color: white;
+    width: 50%;
+    font-weight: bold;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.yellow-background {
+    background-color: #ffcc00; 
+    padding: 5px;
+    margin: 15px;
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 550px) {
+    .jumbotron {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media only screen and (min-width: 650px) {
+
+        
+    body {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
+    h1 {
+        font-size: 2.25em;
+    }
+
+    h2 {
+        font-size: 1.75em;
+    }
+
+    hr {
+        display: none;
+    }
+
+    .intro {
+        flex-direction: row;
+    }
+
+    .main {
+        flex: 4;
+    }
+
+    .price {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        flex: 10;
+    }
+        
+    section {
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .main {
+        flex: 2;
+    }
+
+    .price {
+        flex-direction: column;     
+        flex: 2;
+    }
+
+    .yellow-background {
+        padding: 0;
+        min-width: 100%;
+    }
+}
+
+
