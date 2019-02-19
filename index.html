@@ -24,7 +24,7 @@
 			E-mail:<br>
 			<input type="email" name="email" required><br>
 			Date Requested:<br>
-			<select name="months" id="month" class="input-area" required>
+			<select name="months" id="month" class="input-area">
 				<option value=1>January</option>
 				<option value=2>February</option>
 				<option value=3>March</option>
@@ -40,10 +40,11 @@
 			</select>
 			<input type="number" name="quantity" min="1" id="day" class="input-area" required><br>
 			Time Requested:
-			<input type="checkbox" name="am" value="am">AM
-			<input type="checkbox" name="pm" value="pm">PM
-			<input type="submit" value="Submit" id="submit"> 
-
+			<input type="checkbox" name="am" value="am">AM 
+			<input type="checkbox" name="pm" value="pm">PM 
+			<input type="submit" name="Submit" id="submit-btn">
+			<!--Success notification-->
+			<div id="success"><p>Request sent successfully!</p></div>
 		</form>
 	</div>
 	<!--Heading-->
@@ -52,7 +53,7 @@
 			<h1 class="font">Spic & Span </h1>
 			<h2>Move Out <br> Cleaning Services</h2>
 			<div class="contact-div">
-				<a href="tel:1-713-635-9984">713-635-9984</a>
+				<a href="tel:1-123-456-7890">123-456-7890</a>
 				<p id="contact">Schedule Now</p>
 			</div>
 		</div>

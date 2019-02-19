@@ -3,6 +3,8 @@ const date = new Date();
 const day = document.querySelector("#day");
 const month = document.querySelector("#month");
 const contact = document.querySelector("#contact");
+const submit = document.querySelector("#submit-btn");
+const modal = document.querySelector(".modal-background");
 
 //Set initial max days to 31 for January
 day.setAttribute("max", 31);
@@ -18,15 +20,25 @@ month.addEventListener("change", () => {
     }
 });
 
-//Modal open/close
+//Modal open
 contact.addEventListener("click", () => {
-    const modal = document.querySelector(".modal-background");
     modal.style.display="flex";
-    const body = document.querySelector("body");
-    body.style.overflowY="hidden"
+    //Modal close
     const close = document.querySelector("#close");
-    close.addEventListener("click", () => {
-        modal.style.display="none";
-        body.style.overflowY="auto";
-    })
-})
+    close.addEventListener("click", closed);
+});
+
+//Submit confirmation 
+submit.addEventListener("submit", (e) => { 
+    e.preventDefault();
+    const success = document.querySelector("#success");
+    success.style.display="flex";
+    window.setTimeout(closed, 1500)
+    window.setTimeout(function() {success.style.display="none"}, 1500);
+});   
+
+//Modal close
+function closed() {
+    modal.style.display="none";
+}
+

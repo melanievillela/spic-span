@@ -12,6 +12,7 @@ body {
     flex-direction: column;
     align-items: center;
     font-family: 'Patua One', cursive;
+    position: relative;
 }
 
 #close {
@@ -51,6 +52,9 @@ form {
     background-color: #ffcc00; 
     border-radius: 10px;
     z-index: 100;
+    height: 80vh;
+    position: fixed;
+    top: 25px;
 }
 
 h1, h2, h4 {
@@ -66,10 +70,7 @@ h1 {
 }
 
 header {
-    background-image: url("../cleaning.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: #0033ff;
     width: 100%;
     position: sticky;
     top: 0;
@@ -109,7 +110,7 @@ li {
 
 .modal-background {
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.5); 
     position: absolute;
     top: 0;
@@ -117,6 +118,7 @@ li {
     justify-content: center;
     align-items: center; 
     display: none;
+    z-index: 50;
 }
 
 p {
@@ -124,19 +126,37 @@ p {
     line-height: 1.25em;
 }
 
-#submit {
+#submit-btn {
     border: none;
     background-color: red;
     color: white;
     width: 50%;
+    height: 50px;
     font-weight: bold;
     font-size: 1em;
     cursor: pointer;
+    margin-top: 15px;
+    border-radius: 5px
+}
+
+#success {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 150;
+    background-color: #ffcc00;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    text-align: center;
 }
 
 .yellow-background {
     background-color: #ffcc00; 
-    padding: 5px;
+    padding: 15px;
     margin: 15px;
     border-radius: 10px;
 }
@@ -149,7 +169,6 @@ p {
 }
 
 @media only screen and (min-width: 650px) {
-
         
     body {
         flex-direction: row;
@@ -199,11 +218,6 @@ p {
     .price {
         flex-direction: column;     
         flex: 2;
-    }
-
-    .yellow-background {
-        padding: 0;
-        min-width: 100%;
     }
 }
 
