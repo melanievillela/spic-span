@@ -3,7 +3,7 @@ const date = new Date();
 const day = document.querySelector("#day");
 const month = document.querySelector("#month");
 const contact = document.querySelector("#contact");
-const submit = document.querySelector("#submit-btn");
+const form = document.querySelector("#contact-form");
 const modal = document.querySelector(".modal-background");
 
 //Set initial max days to 31 for January
@@ -29,7 +29,7 @@ contact.addEventListener("click", () => {
 });
 
 //Submit confirmation 
-submit.addEventListener("submit", (e) => { 
+form.addEventListener("submit", (e) => { 
     e.preventDefault();
     const success = document.querySelector("#success");
     success.style.display="flex";
